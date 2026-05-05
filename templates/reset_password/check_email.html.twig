@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}E-mail enviado — Project Core{% endblock %}
+
+{% block body %}
+<div class="flex justify-center items-start pt-12">
+    <div class="w-full max-w-md bg-white rounded-2xl shadow-sm border border-slate-200 p-8 text-center">
+        <div class="text-4xl mb-4">📬</div>
+        <h1 class="text-2xl font-bold text-slate-800 mb-2">Verifique seu e-mail</h1>
+        <p class="text-sm text-slate-600 mb-4">
+            Se existe uma conta com esse e-mail, você receberá um link para redefinir sua senha.
+            O link expira em <strong>{{ resetToken.expirationMessageKey|trans(resetToken.expirationMessageData, 'ResetPasswordBundle') }}</strong>.
+        </p>
+        <p class="text-sm text-slate-500">
+            Não recebeu?
+            <a href="{{ path('app_forgot_password_request') }}" class="text-blue-600 hover:underline">Tente novamente</a>
+            ou verifique a pasta de spam.
+        </p>
+        <div class="mt-6">
+            <a href="{{ path('app_login') }}" class="text-sm text-blue-600 hover:underline">Voltar ao login</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
