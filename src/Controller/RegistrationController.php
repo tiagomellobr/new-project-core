@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\User;
 use App\Form\RegistrationFormType;
 use App\Security\EmailVerifier;
+use App\Service\RecaptchaService;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -27,7 +28,7 @@ class RegistrationController extends AbstractController
     }
 
     #[Route('/register', name: 'app_register')]
-    public function register(Request $request, UserPasswordHasherInterface $userPasswordHasher, Security $security, EntityManagerInterface $entityManager): Response
+    public function register(Request $request, UserPasswordHasherInterface $userPasswordHasher, Security $security, EntityManagerInterface $entityManager, RecaptchaService $recaptcha): Response
     {
         if (!$this->registrationEnabled) {
             throw $this->createNotFoundException('O cadastro de novos usuários está desabilitado.');
@@ -38,6 +39,13 @@ class RegistrationController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $token = $request->request->getString('_recaptcha_token');
+            if (!$recaptcha->isValid($token, 'register')) {
+                $this->addFlash('verify_email_error', 'Verificação de segurança falhou. Tente novamente.');
+
+                return $this->render('registration/register.html.twig', ['registrationForm' => $form]);
+            }
+
             /** @var string $plainPassword */
             $plainPassword = $form->get('plainPassword')->getData();
 

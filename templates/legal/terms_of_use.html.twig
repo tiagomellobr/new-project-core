@@ -1,0 +1,131 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Termos de Uso — Project Core{% endblock %}
+
+{% block body %}
+<div class="max-w-3xl mx-auto py-10">
+    <h1 class="text-3xl font-bold text-slate-800 mb-2">Termos de Uso</h1>
+    <p class="text-sm text-slate-400 mb-10">Última atualização: maio de 2026</p>
+
+    <div class="space-y-8 text-slate-700 text-sm leading-relaxed">
+
+        <section>
+            <h2 class="text-lg font-semibold text-slate-800 mb-2">1. Aceitação dos termos</h2>
+            <p>
+                Ao acessar ou utilizar esta plataforma, você declara ter lido, compreendido e concordado
+                com estes Termos de Uso. Caso não concorde com qualquer disposição, não utilize a plataforma.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="text-lg font-semibold text-slate-800 mb-2">2. Descrição do serviço</h2>
+            <p>
+                Esta plataforma oferece serviços aos seus usuários cadastrados. As funcionalidades específicas
+                são descritas na própria aplicação.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="text-lg font-semibold text-slate-800 mb-2">3. Cadastro e conta</h2>
+            <ul class="list-disc pl-5 space-y-1">
+                <li>O acesso a funcionalidades completas exige cadastro com e-mail válido.</li>
+                <li>Você é responsável pela confidencialidade de suas credenciais e por todas as atividades realizadas em sua conta.</li>
+                <li>Notifique-nos imediatamente caso suspeite de uso não autorizado da sua conta.</li>
+                <li>É proibido criar contas falsas, automatizadas ou em nome de terceiros sem autorização.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 class="text-lg font-semibold text-slate-800 mb-2">4. Uso permitido</h2>
+            <p>Você pode utilizar a plataforma para acessar as funcionalidades disponibilizadas, respeitando estes termos e a legislação aplicável.</p>
+        </section>
+
+        <section>
+            <h2 class="text-lg font-semibold text-slate-800 mb-2">5. Uso proibido</h2>
+            <p>É expressamente vedado:</p>
+            <ul class="list-disc pl-5 space-y-1 mt-2">
+                <li>Utilizar scrapers, bots ou qualquer meio automatizado para acessar a plataforma;</li>
+                <li>Tentar burlar medidas de segurança ou acessar áreas restritas sem autorização;</li>
+                <li>Praticar atos que violem direitos de propriedade intelectual de terceiros;</li>
+                <li>Utilizar a plataforma para fins ilícitos ou que violem a legislação brasileira.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 class="text-lg font-semibold text-slate-800 mb-2">6. Propriedade intelectual</h2>
+            <p>
+                O código, design e marca desta plataforma são de propriedade de seus respectivos titulares
+                e não podem ser reproduzidos sem autorização prévia por escrito.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="text-lg font-semibold text-slate-800 mb-2">7. Disponibilidade do serviço</h2>
+            <p>
+                Buscamos manter a plataforma disponível continuamente, mas não garantimos disponibilidade
+                ininterrupta. Podemos realizar manutenções, atualizações ou suspender o serviço temporariamente
+                sem aviso prévio. Não nos responsabilizamos por perdas decorrentes de indisponibilidade.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="text-lg font-semibold text-slate-800 mb-2">8. Limitação de responsabilidade</h2>
+            <p>
+                Na máxima extensão permitida pela legislação aplicável, não nos responsabilizamos
+                por danos indiretos, incidentais ou consequentes decorrentes do uso ou da impossibilidade
+                de uso da plataforma, incluindo lucros cessantes ou perda de dados.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="text-lg font-semibold text-slate-800 mb-2">9. Rescisão</h2>
+            <p>
+                Você pode encerrar sua conta a qualquer momento pelo seu perfil ou enviando solicitação para
+                <a href="mailto:contato@example.com" class="text-blue-600 hover:underline">contato@example.com</a>.
+                Reservamo-nos o direito de suspender ou encerrar contas que violem estes termos,
+                sem necessidade de aviso prévio.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="text-lg font-semibold text-slate-800 mb-2">10. Privacidade</h2>
+            <p>
+                O tratamento dos seus dados pessoais é regido pela nossa
+                <a href="{{ path('app_privacy_policy') }}" class="text-blue-600 hover:underline">Política de Privacidade</a>,
+                em conformidade com a LGPD (Lei nº 13.709/2018).
+            </p>
+        </section>
+
+        <section>
+            <h2 class="text-lg font-semibold text-slate-800 mb-2">11. Alterações nos termos</h2>
+            <p>
+                Podemos atualizar estes Termos a qualquer momento. Alterações relevantes serão comunicadas
+                por e-mail ou aviso na plataforma com antecedência mínima de 10 dias.
+                O uso continuado após o prazo implica aceite das novas condições.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="text-lg font-semibold text-slate-800 mb-2">12. Lei aplicável e foro</h2>
+            <p>
+                Estes Termos são regidos pelas leis da República Federativa do Brasil.
+                Fica eleito o foro da Comarca de São Paulo/SP para dirimir quaisquer controvérsias
+                decorrentes deste instrumento, com renúncia a qualquer outro, por mais privilegiado que seja.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="text-lg font-semibold text-slate-800 mb-2">13. Contato</h2>
+            <p>
+                Dúvidas sobre estes Termos:
+                <a href="mailto:contato@example.com" class="text-blue-600 hover:underline">contato@example.com</a>
+            </p>
+        </section>
+
+    </div>
+
+    <div class="mt-12 pt-6 border-t border-slate-200">
+        <a href="{{ path('app_home') }}" class="text-sm text-blue-600 hover:underline">&larr; Voltar para o início</a>
+    </div>
+</div>
+{% endblock %}

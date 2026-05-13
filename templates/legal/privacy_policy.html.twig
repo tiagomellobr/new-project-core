@@ -1,0 +1,148 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Política de Privacidade — Project Core{% endblock %}
+
+{% block body %}
+<div class="max-w-3xl mx-auto py-10">
+    <h1 class="text-3xl font-bold text-slate-800 mb-2">Política de Privacidade</h1>
+    <p class="text-sm text-slate-400 mb-10">Última atualização: maio de 2026</p>
+
+    <div class="prose prose-slate max-w-none space-y-8 text-slate-700 text-sm leading-relaxed">
+
+        <section>
+            <h2 class="text-lg font-semibold text-slate-800 mb-2">1. Quem somos</h2>
+            <p>
+                Esta plataforma coleta e processa dados pessoais dos seus usuários.
+                Este documento descreve como coletamos, usamos e protegemos os seus dados pessoais,
+                em conformidade com a <strong>Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018)</strong>.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="text-lg font-semibold text-slate-800 mb-2">2. Dados que coletamos</h2>
+            <ul class="list-disc pl-5 space-y-1">
+                <li><strong>Dados de cadastro:</strong> nome e endereço de e-mail fornecidos no registro.</li>
+                <li><strong>Dados de uso:</strong> páginas visitadas e preferências de navegação.</li>
+                <li><strong>Dados técnicos:</strong> endereço IP, tipo de navegador, sistema operacional e cookies de sessão.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 class="text-lg font-semibold text-slate-800 mb-2">3. Finalidade e base legal</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm border border-slate-200 rounded-lg overflow-hidden">
+                    <thead class="bg-slate-100 text-slate-600 text-xs uppercase">
+                        <tr>
+                            <th class="text-left px-4 py-2">Finalidade</th>
+                            <th class="text-left px-4 py-2">Base legal (LGPD)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100">
+                        <tr class="bg-white">
+                            <td class="px-4 py-2">Criar e gerenciar sua conta</td>
+                            <td class="px-4 py-2">Execução de contrato (art. 7º, V)</td>
+                        </tr>
+                        <tr class="bg-slate-50">
+                            <td class="px-4 py-2">Enviar notificações e comunicações</td>
+                            <td class="px-4 py-2">Legítimo interesse / consentimento (art. 7º, II e IX)</td>
+                        </tr>
+                        <tr class="bg-white">
+                            <td class="px-4 py-2">Segurança e prevenção a fraudes</td>
+                            <td class="px-4 py-2">Legítimo interesse (art. 7º, IX)</td>
+                        </tr>
+                        <tr class="bg-slate-50">
+                            <td class="px-4 py-2">Cookies analíticos (com seu consentimento)</td>
+                            <td class="px-4 py-2">Consentimento (art. 7º, I)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-lg font-semibold text-slate-800 mb-2">4. Cookies e tecnologias similares</h2>
+            <p>Utilizamos os seguintes tipos de cookies:</p>
+            <ul class="list-disc pl-5 space-y-1 mt-2">
+                <li><strong>Cookies essenciais:</strong> necessários para o funcionamento da plataforma (sessão, segurança CSRF). Não requerem consentimento.</li>
+                <li><strong>Cookies de segurança (Google reCAPTCHA):</strong> utilizados para proteger nossos formulários públicos contra bots e acessos automatizados. O Google reCAPTCHA v3 carrega automaticamente nas páginas de login, cadastro e recuperação de senha, podendo instalar o cookie <code>_GRECAPTCHA</code> no seu navegador e transmitir ao Google dados como endereço IP e informações sobre o comportamento de navegação para calcular uma pontuação de risco. Isso é necessário para a segurança da plataforma e dispensa consentimento prévio (legítimo interesse / segurança).</li>
+                <li><strong>Cookies analíticos (Google Analytics):</strong> coletam dados sobre como você navega na plataforma (páginas visitadas, tempo de sessão, origem do acesso). Só são ativados com o seu consentimento explícito.</li>
+            </ul>
+            <p class="mt-2">
+                O Google Analytics pode coletar seu endereço IP e instalar os cookies <code>_ga</code> e <code>_gid</code> no seu navegador,
+                com retenção de dados de até 14 meses. Você pode revogar seu consentimento a qualquer momento limpando os cookies
+                do navegador ou ajustando as preferências no banner exibido na plataforma.
+                Para mais informações sobre como o Google trata esses dados, consulte a
+                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Política de Privacidade do Google</a>.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="text-lg font-semibold text-slate-800 mb-2">5. Compartilhamento de dados</h2>
+            <p>
+                Não vendemos nem alugamos seus dados pessoais. Podemos compartilhá-los apenas com:
+            </p>
+            <ul class="list-disc pl-5 space-y-1 mt-2">
+                <li>Provedores de infraestrutura (hospedagem, banco de dados) sob acordos de confidencialidade;</li>
+                <li><strong>Google LLC</strong> — para proteção contra bots via Google reCAPTCHA v3 (essencial, sem consentimento prévio) e para análise de uso via Google Analytics (mediante seu consentimento);</li>
+                <li>Autoridades competentes, quando exigido por lei.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 class="text-lg font-semibold text-slate-800 mb-2">6. Seus direitos</h2>
+            <p>Nos termos da LGPD, você tem direito a:</p>
+            <ul class="list-disc pl-5 space-y-1 mt-2">
+                <li>Confirmar a existência de tratamento dos seus dados;</li>
+                <li>Acessar seus dados pessoais;</li>
+                <li>Corrigir dados incompletos, inexatos ou desatualizados;</li>
+                <li>Solicitar a anonimização, bloqueio ou eliminação de dados desnecessários;</li>
+                <li>Revogar o consentimento a qualquer momento;</li>
+                <li>Opor-se ao tratamento com base em legítimo interesse.</li>
+            </ul>
+            <p class="mt-2">
+                Para exercer seus direitos, entre em contato pelo e-mail:
+                <a href="mailto:privacidade@example.com" class="text-blue-600 hover:underline">privacidade@example.com</a>
+            </p>
+        </section>
+
+        <section>
+            <h2 class="text-lg font-semibold text-slate-800 mb-2">7. Retenção de dados</h2>
+            <p>
+                Seus dados são mantidos enquanto sua conta estiver ativa. Após o encerramento,
+                os dados são eliminados em até 90 dias, salvo obrigação legal de retenção.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="text-lg font-semibold text-slate-800 mb-2">8. Segurança</h2>
+            <p>
+                Adotamos medidas técnicas e organizacionais adequadas para proteger seus dados contra
+                acesso não autorizado, perda, destruição ou divulgação — incluindo criptografia em trânsito (HTTPS),
+                controle de acesso e armazenamento seguro de credenciais.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="text-lg font-semibold text-slate-800 mb-2">9. Alterações nesta política</h2>
+            <p>
+                Podemos atualizar esta política periodicamente. Alterações relevantes serão comunicadas
+                por e-mail ou por aviso destacado na plataforma. O uso continuado após a notificação
+                implica aceite das novas condições.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="text-lg font-semibold text-slate-800 mb-2">10. Contato</h2>
+            <p>
+                Dúvidas sobre esta política ou sobre o tratamento dos seus dados:
+                <a href="mailto:privacidade@example.com" class="text-blue-600 hover:underline">privacidade@example.com</a>
+            </p>
+        </section>
+
+    </div>
+
+    <div class="mt-12 pt-6 border-t border-slate-200">
+        <a href="{{ path('app_home') }}" class="text-sm text-blue-600 hover:underline">&larr; Voltar para o início</a>
+    </div>
+</div>
+{% endblock %}

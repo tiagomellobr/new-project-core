@@ -23,6 +23,8 @@
                 {{ form_errors(requestForm.email) }}
             </div>
 
+            <input type="hidden" name="_recaptcha_token" id="reset_recaptcha_token">
+
             <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-lg transition-colors text-sm">
                 Enviar link de recuperação
             </button>
@@ -34,4 +36,18 @@
         </p>
     </div>
 </div>
+
+<script src="https://www.google.com/recaptcha/api.js?render={{ recaptcha_site_key }}"></script>
+<script>
+    document.getElementById('reset_recaptcha_token').closest('form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const form = this;
+        grecaptcha.ready(function() {
+            grecaptcha.execute('{{ recaptcha_site_key }}', {action: 'reset_password'}).then(function(token) {
+                document.getElementById('reset_recaptcha_token').value = token;
+                form.submit();
+            });
+        });
+    });
+</script>
 {% endblock %}
