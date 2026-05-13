@@ -2,6 +2,10 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## General Rules
+
+- **Never add fallbacks, defaults, or error-handling for scenarios not explicitly requested.** If a fallback seems necessary, ask the user before implementing it.
+
 ## Project Overview
 
 This repository provides a reusable Symfony 7.4 (PHP 8.4) application template intended to serve as a base for future projects. It contains a Docker-based development setup, common Symfony configuration, and example scaffolding (controllers, entities, templates) to accelerate new project starts. Replace project-specific references (name, routes, entities, templates, and environment variables) when creating a new project from this template.
